@@ -36,10 +36,16 @@ context "user signed in on the homepage" do
     expect(page).not_to have_link('Sign up')
   end
 
-  it "can only edit/delete restaurants which they've created" do
+  it "can only edit restaurants which they've created" do
     visit('/')
     click_link 'Edit KFC'
-    expect(page).to have_content 'error'
+    expect(page).to have_content "You can't edit this restaurant"
+  end
+
+  it "can only delete restaurants which they've created" do
+    visit('/')
+    click_link 'Delete KFC'
+    expect(page).to have_content "You can't delete this restaurant"
   end
 
 end
