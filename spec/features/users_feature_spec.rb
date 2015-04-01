@@ -16,6 +16,7 @@ end
 context "user signed in on the homepage" do
 
   before do
+    Restaurant.create(name: 'KFC')
     visit('/')
     click_link('Sign up')
     fill_in('Email', with: 'test@example.com')
@@ -37,8 +38,8 @@ context "user signed in on the homepage" do
 
   it "can only edit/delete restaurants which they've created" do
     visit('/')
-
-
+    click_link 'Edit KFC'
+    expect(page).to have_content 'error'
   end
 
 end
