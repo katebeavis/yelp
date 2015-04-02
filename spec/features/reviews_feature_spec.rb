@@ -55,4 +55,11 @@ feature 'reviewing' do
     expect(page).to have_content("You have already reviewed this restaurant")
   end
 
+  scenario 'can only be deleted by the user who created it' do
+    click_link 'Sign out'
+    click_link 'Delete so so'
+    expect(page).to have_content("You can't delete this review")
+  end
+
+
 end
