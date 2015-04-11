@@ -10,8 +10,8 @@ class Restaurant < ActiveRecord::Base
   end
 
   def average_rating
-    return "N/A" if reviews.none?
-    4
+    return 'N/A' if reviews.none?
+    reviews.average(:rating)
   end
 
 

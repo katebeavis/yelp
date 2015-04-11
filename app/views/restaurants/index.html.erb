@@ -8,16 +8,17 @@
 <h3>Reviews for <%= restaurant.name %></h3>
 
 <% if restaurant.reviews.any? %>
-  <ul>
-    <% restaurant.reviews.each do |review| %>
-      <li>
-        <%= review.thoughts %>, <strong><%= review.rating %></strong>/5
-        <%= link_to "Delete #{review.thoughts}", restaurant_review_path(restaurant, review), method: :delete %>
-      </li>
-    <% end %>
-  </ul>
-<% else %>
-  <p>No reviews.</p>
+  <h4>Average rating: <%= star_rating(restaurant.average_rating) %></h4>
+    <ul>
+      <% restaurant.reviews.each do |review| %>
+        <li>
+          <%= review.thoughts %> <%= star_rating(review.rating) %>
+          <%= link_to "Delete #{review.thoughts}", restaurant_review_path(restaurant, review), method: :delete %>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>No reviews.</p>
 <% end %>
 
 
