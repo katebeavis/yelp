@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'orm_adapter'
 gem 'omniauth-facebook'
+gem 'aws-sdk','< 2.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -43,11 +44,14 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  # gem 'spring', '~> 1.3.3'
 
   gem 'rspec-rails'
   gem 'capybara'
   gem 'rspec-collection_matchers'
   gem 'shoulda'
+  gem 'poltergeist'
+  gem 'database_cleaner'
+  gem 'paperclip'
 end
 
