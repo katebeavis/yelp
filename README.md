@@ -23,15 +23,15 @@ We were also introduced to Omniauth, Devise and AWS. I think this project really
 
 ## To Run
 ```
-$ git clone https://github.com/katebeavis/gitprofile-prototype.git
-$ cd gitprofile-prototype
-$ npm install
-$ bower install
-$ node server.js
-visit http://localhost:8080
+$ git clone https://github.com/katebeavis/yelp.git
+$ cd yelp
+$ bundle install
+$ rake db:create db:migrate
+$ rails s
+visit http://localhost:3000
 ```
 
 ## To Run Tests
 ```
-$ karma start
+$ rspec
 ```
