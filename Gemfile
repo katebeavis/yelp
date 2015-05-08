@@ -26,4 +26,6 @@ group :development, :test do
   gem 'paperclip'
   gem 'dotenv-rails'
   gem 'launchy'
+
+  gem 'codeclimate-test-reporter', group: :test, require: nil
 end
