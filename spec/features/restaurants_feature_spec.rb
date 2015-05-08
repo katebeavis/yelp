@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 feature 'restaurants' do
-
   def sign_up
     visit('/')
     click_link('Sign up')
@@ -31,7 +30,6 @@ feature 'restaurants' do
   end
 
   context 'restaurants have been added' do
-
     before do
       create_restaurant
     end
@@ -52,7 +50,7 @@ feature 'restaurants' do
   end
 
   context 'viewing restaurants' do
-    let!(:kfc){Restaurant.create(name:'KFC')}
+    let!(:kfc) { Restaurant.create(name: 'KFC') }
 
     scenario 'lets a user view a restaurant' do
       visit '/restaurants'
@@ -63,7 +61,6 @@ feature 'restaurants' do
   end
 
   context 'editing restaurants' do
-
     scenario 'let a user edit a restaurant' do
       create_restaurant
       click_link 'Edit KFC'
@@ -75,7 +72,6 @@ feature 'restaurants' do
   end
 
   context 'deleting restaurants' do
-
     scenario 'removes a restaurant when a user clicks a delete link' do
       create_restaurant
       click_link 'Delete KFC'
@@ -94,5 +90,4 @@ feature 'restaurants' do
       expect(page).to have_content 'error'
     end
   end
-
 end
