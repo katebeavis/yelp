@@ -33,8 +33,8 @@ visit http://localhost:3000
 You need to set up the following environment variables in a .env file in the root directory to enable photo uploading and facebook login: 
 ```
 FACEBOOK_APP_SECRET=XXX_FB_SECRET_KEY_XXX
-AWSAccessKeyId=XXX_AWS_ID_XXX
-AWSSecretKey=XXX_AWS_KEY_XXX
+AWS_ACCESS_KEY_ID=XXX_AWS_ID_XXX
+AWS_SECRET_ACCESS_KEY=XXX_AWS_KEY_XXX
 ```
 
 ## To Run Tests
