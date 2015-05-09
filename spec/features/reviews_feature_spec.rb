@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-  def leave_review(thoughts, rating)
-    visit '/restaurants'
-    click_link 'Review KFC'
-    fill_in 'Thoughts', with: 'so so'
-    select rating, from: 'Rating'
-    click_button 'Leave Review'
-  end
+def leave_review(thoughts, rating)
+  visit '/restaurants'
+  click_link 'Review KFC'
+  fill_in 'Thoughts', with: 'so so'
+  select rating, from: 'Rating'
+  click_button 'Leave Review'
+end
 
 feature 'reviewing' do
   context 'user not signed in and on the restaurant page' do
