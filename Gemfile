@@ -13,6 +13,7 @@ gem 'devise'
 gem 'orm_adapter'
 gem 'omniauth-facebook'
 gem 'aws-sdk', '< 2.0'
+gem 'paperclip'
 
 group :development, :test do
   gem 'byebug'
@@ -23,7 +24,6 @@ group :development, :test do
   gem 'shoulda'
   gem 'poltergeist'
   gem 'database_cleaner'
-  gem 'paperclip'
   gem 'dotenv-rails'
   gem 'launchy'
 
